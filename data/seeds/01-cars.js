@@ -1,9 +1,37 @@
 exports.seed = async function (knex) {
-  await knex("cars").del();
+  await knex("cars").truncate();
   await knex("cars").insert([
-    { vin: "", make: "", model: "", mileage: 35, title: "", transmission: "" },
-    { vin: "", make: "", model: "", mileage: 40, title: "", transmission: "" },
-    { vin: "", make: "", model: "", mileage: 45, title: "", transmission: "" },
-    { vin: "", make: "", model: "", mileage: 50, title: "", transmission: "" },
+    {
+      vin: "11111",
+      make: "toyota",
+      model: "prius",
+      mileage: 35,
+      title: "clean",
+      transmission: "manual",
+    },
+    {
+      vin: "2222",
+      make: "jeep",
+      model: "truck",
+      mileage: 40,
+      title: "idk",
+      transmission: "something",
+    },
+    {
+      vin: "5555",
+      make: "asss",
+      model: "tesla",
+      mileage: 45,
+      title: "wut",
+      transmission: "idk",
+    },
+    {
+      vin: "666",
+      make: "gfdsf",
+      model: "sdfsaf",
+      mileage: 50,
+      title: "asdf",
+      transmission: "asdfa",
+    },
   ]);
 };
